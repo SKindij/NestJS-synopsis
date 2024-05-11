@@ -1,7 +1,17 @@
 # NestJS-synopsis
 _A progressive Node.js framework for building efficient, reliable and scalable server-side applications._
 
-> Please make sure that Node.js (version >= 16) is installed on your operating system.
+> 1. Please make sure that Node.js (version >= 16) is installed on your operating system.\
+>     + ``node -v`` => 📘 v20.9.0
+>     + ``npm -v`` => 📘 v10.7.0
+> 2. Install Nest CLI:
+>     + ``npm i -g @nestjs/cli``
+>     + ``nest -v`` => 📘 v10.3.2
+> 3. Create a new Nest project
+>     + ``nest new project-name``
+
+
+
 
 ## 📚 Basic Information
 
