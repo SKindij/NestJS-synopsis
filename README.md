@@ -9,6 +9,9 @@ _A progressive Node.js framework for building efficient, reliable and scalable s
 >     + ``nest -v`` => 📘 v10.3.2
 > 3. Create a new Nest project
 >     + ``nest new project-name``
+> 4. Starting application...
+>     + ``nest start``
+>       - http://localhost:3000
 
 
 
