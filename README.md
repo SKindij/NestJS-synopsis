@@ -13,9 +13,6 @@ _A progressive Node.js framework for building efficient, reliable and scalable s
 >     + ``nest start``
 >       - http://localhost:3000
 
-
-
-
 ## 📚 Basic Information
 
 * Documentation:
@@ -26,11 +23,6 @@ _A progressive Node.js framework for building efficient, reliable and scalable s
 * Real World
   + 🌐 https://realworld-docs.netlify.app/
   + 🌐 https://demo.realworld.io/#/
-
-
-
-
-
 
 ## 📚 Project Structure
 
@@ -48,20 +40,25 @@ _A progressive Node.js framework for building efficient, reliable and scalable s
 
 ### 💢 Top-level files 💢
 + 📄 **app.controller.ts**
-    - _A basic controller with a single route._
+    - _it defines a basic controller for app_
+    - _it is responsible for handling incoming requests and returning responses to client_
+    - _here you define routes (HTTP endpoints) and their corresponding handler methods_
 + 📄 **app.controller.spec.ts**
-    - _The unit tests for the controller._
+    - _it contains unit tests for the controller_
+    - _it helps catch bugs early in the development process_
+    - _here you write tests to verify the behavior of your controller's methods_
 + 📄 **app.module.ts**
-    - _The root module of the application._
+    - _it is the root module of the application_
+    - _here you import and declare various components of your app_
 + 📄 **app.service.ts**
-    - _A basic service with a single method._
+    - _it defines a basic service for your app_
+    - _used to encapsulate business logic_
+    - _here you define methods that perform specific tasks or operations_
+    - _it can contain dependencies injected via the constructor_
 + 📄 **main.ts**
-    - _The entry file of the application which uses the core function NestFactory to create a Nest application instance._
-
-
-
-
-
+    - _it serves as the entry point for your NestJS app_
+    - _it uses core function NestFactory to create a Nest app instance_
+    - _here you white code to configure middleware, set up global prefixes, enable CORS_
 
 ### 💢 Top-level folders 💢
 
