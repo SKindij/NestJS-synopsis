@@ -70,7 +70,7 @@ _A progressive Node.js framework for building efficient, reliable and scalable s
 
 ## npm "dependencies"
 
-#### 🔍 "tsconfig-paths"
+#### 🧩 "tsconfig-paths"
 _Use this to load modules whose location is specified in the paths section of tsconfig.json or jsconfig.json. Both loading at run-time and via API are supported._
 
 * npm-site: https://www.npmjs.com/package/tsconfig-paths
@@ -79,7 +79,7 @@ _Use this to load modules whose location is specified in the paths section of ts
   - weekly downloads: 27 650 000
 * home-page: github.com/dividab/tsconfig-paths
 
-#### 🔍 ""
+#### 🔍 "module-alias"
 _Create aliases of directories and register custom module paths in NodeJS like a boss!_
 
 * npm-site: https://www.npmjs.com/package/module-alias
@@ -88,7 +88,14 @@ _Create aliases of directories and register custom module paths in NodeJS like a
   - weekly downloads: 1 107 000
 * home-page: github.com/ilearnio/module-alias
 
+#### 🛠️ "nodemon"
+_It is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected._
 
+* npm-site: https://www.npmjs.com/package/nodemon
+  - version: 3.1.0
+  - install: `npm install --save-dev nodemon`
+  - weekly downloads: 5 661 000
+* home-page: https://nodemon.io
 
 
 
@@ -100,7 +107,7 @@ _Create aliases of directories and register custom module paths in NodeJS like a
 
 ## npm "devDependencies"
 
-#### 🔍 ""
+#### 🧪 "" 🔬
 _..._
 
 * npm-site: 
@@ -125,11 +132,19 @@ _..._
 
 ```
 
-#### package.json
+#### nodemon.json
+```json
+  {
+    "watch": ["src"],
+    "ext": "ts",
+    "exec": "set IS_TS_NODE=true && ts-node -r tsconfig-paths/register src/main.ts"
+  }
+```
 
+#### package.json
 ```json
   "scripts": {
-    "start": "set IS_TS_NODE=true && ts-node -r tsconfig-paths/register src/main.ts",
+    "start": "nodemon",
     "start:prod": "node dist/main",
   },
   "_moduleAliases": {
@@ -138,7 +153,6 @@ _..._
 ```
 
 #### src/main.ts
-
 ```typescript
   if (!process.env.IS_TS_NODE) {
     require('module-alias/register')
