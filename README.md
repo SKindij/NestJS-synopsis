@@ -65,3 +65,40 @@ _A progressive Node.js framework for building efficient, reliable and scalable s
 
 
 
+
+- - -
+
+## npm "dependencies"
+
+#### 🔍 ""
+_Create aliases of directories and register custom module paths in NodeJS like a boss!_
+
+* npm-site: https://www.npmjs.com/package/module-alias
+  - version: 2.2.3
+  - install: `npm i --save module-alias`
+  - weekly downloads: 1 107 000
+* home-page: github.com/ilearnio/module-alias
+
+
+
+
+
+
+
+
+
+- - -
+
+## npm "devDependencies"
+
+#### 🔍 ""
+_..._
+
+* npm-site: 
+  - version: 
+  - install: ``
+  - weekly downloads: 
+* home-page: 
+
+
+
