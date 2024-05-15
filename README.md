@@ -70,6 +70,15 @@ _A progressive Node.js framework for building efficient, reliable and scalable s
 
 ## npm "dependencies"
 
+#### 🔍 "tsconfig-paths"
+_Use this to load modules whose location is specified in the paths section of tsconfig.json or jsconfig.json. Both loading at run-time and via API are supported._
+
+* npm-site: https://www.npmjs.com/package/tsconfig-paths
+  - version: 4.2.0
+  - install: `npm install --save-dev tsconfig-paths`
+  - weekly downloads: 27 650 000
+* home-page: github.com/dividab/tsconfig-paths
+
 #### 🔍 ""
 _Create aliases of directories and register custom module paths in NodeJS like a boss!_
 
@@ -99,6 +108,49 @@ _..._
   - install: ``
   - weekly downloads: 
 * home-page: 
+
+
+- - -
+
+## Project modification
+
+### in files
+
+#### tsconfig.json
+
+```json
+  "paths": {
+    "@app/": ["./src/*"]
+  }
+
+```
+
+#### package.json
+
+```json
+  "scripts": {
+    "start": "set IS_TS_NODE=true && ts-node -r tsconfig-paths/register src/main.ts",
+    "start:prod": "node dist/main",
+  },
+  "_moduleAliases": {
+    "@app/": ["./dist"]
+  }
+```
+
+#### src/main.ts
+
+```typescript
+  if (!process.env.IS_TS_NODE) {
+    require('module-alias/register')
+  }
+```
+
+
+
+
+
+
+
 
 
 
